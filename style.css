@@ -21,13 +21,14 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: var(--VeryLightGray);
 }
 
 main {
     display: grid;
     grid-template-columns: 300px 300px 300px;
     box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.500);
-    background-color: white;
+    background-color: var(--VeryLightGray);
 }
 
 main > div {

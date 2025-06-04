@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentWhite: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+    --VeryLightGray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--VeryLightGray);
+}
+
+main#grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    max-width: 800px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#sedans-div {
+    background-color: var(--BrightOrange);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#suvs-div {
+    background-color: var(--DarkCyan);
+}
+
+#luxury-div {
+    background-color: var(--VeryDarkCyan);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.cars-div {
+    padding: 40px;
+    position: relative;
+}
+
+.cars-div img {
+    margin-bottom: 30px;
+    width: 60px;
+}
+
+.cars-div h1 {
+    font-family: 'Big Shoulders', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: var(--VeryLightGray);
+    margin-bottom: 30px;
+}
+
+.cars-div p {
+    color: var(--TransparentWhite);
+    margin-bottom: 120px;
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+}
+
+button {
+    position: absolute;
+    bottom: 50px;
+    border: 2px solid var(--VeryLightGray);
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-family: 'Lexend Deca';
+    font-weight: 700;
+    background-color: var(--VeryLightGray);
+    cursor: pointer;
+}
+
+#sedans-div button {
+    color: var(--BrightOrange);
+}
+
+#sedans-div button:hover {
+    background-color: var(--BrightOrange);
+    color: var(--VeryLightGray);
+    transition: 0.4s ease;
+}
+
+#suvs-div button {
+    color: var(--DarkCyan);
+}
+
+#suvs-div button:hover {
+    background-color: var(--DarkCyan);
+    color: var(--VeryLightGray);
+    transition: 0.4s ease;
+}
+
+#luxury-div button {
+    color: var(--VeryDarkCyan);
+}
+
+#luxury-div button:hover {
+    background-color: var(--VeryDarkCyan);
+    color: var(--VeryLightGray);
+    transition: 0.4s ease;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+}
+
+@media(max-width: 500px) {
+    main#grid-container {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        margin-top: 50px;
+    }
+
+    #sedans-div {
+        border-radius: 0px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+     #luxury-div {
+        border-radius: 0px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
